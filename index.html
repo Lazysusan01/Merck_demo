@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>My Cool Website</title>
-      <!-- <link rel="stylesheet" href="main.css"> -->
-      <script src="https://cdn.tailwindcss.com"></script>
-   </head>
-   <body>
-      <div class="container min-h-screen">  
-      <h1>Welcome to my website! ⭐️</h1>
-      <p class="bg-slate-800">How was your day? 🎉</p>
-      <p class="bg-amber-500 mt-5 content-center">Testing Changes</p>
-      <a href="Mexsana Medicated Powder_14_03_2024_EPD.pdf">EPD</a>
-      </div>
-   </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merck Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+            <img src="CW_logo.png" alt="Company Logo" class="h-64"> <!-- Adjust the h-16 class as needed for your logo size -->
+            <img src="merck-logo-png-transparent.png" alt="Merck Logo" class="h-64"> <!-- Adjust the h-16 class as needed for your logo size -->
+        </div>
+        <div class="text-center">
+            <h1 class="text-6xl font-bold py-10">Mexsana Medicated Powder</h1>
+        </div>
+        <div class="flex flex-col items-center gap-4 py-10">
+            <!-- Button for a PDF link -->
+            <a href="Mexsana Medicated Powder_14_03_2024null.pdf" class="bg-blue-500 hover:bg-blue-700 text-white text-3xl font-bold py-2 px-4 rounded">
+             SDS
+            </a>
+            <a href="Mexsana Medicated Powder_14_03_2024_mini.pdf" class="bg-blue-500 hover:bg-blue-700 text-white text-3xl font-bold py-2 px-4 rounded">
+               Mini SDS
+            </a>
+            <a href="Mexsana Medicated Powder_14_03_2024_EPD.pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold text-3xl py-2 px-4 rounded size">
+                EPD
+            </a>
+            <!-- Add more buttons for other PDF links here -->
+        </div>
+    </div>
+</body>
 </html>
