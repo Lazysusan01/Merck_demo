@@ -9,25 +9,53 @@
 <body class="min-h-screen bg-gray-100">
     <div class="container mx-auto">
         <div class="flex justify-between items-center">
-            <img src="CW_logo.png" alt="Company Logo" class="h-64"> <!-- Adjust the h-16 class as needed for your logo size -->
-            <img src="merck-logo-png-transparent.png" alt="Merck Logo" class="h-64"> <!-- Adjust the h-16 class as needed for your logo size -->
+            <img src="CW_logo.png" alt="Company Logo" class="h-64">
+            <img src="merck-logo-png-transparent.png" alt="Merck Logo" class="h-64">
         </div>
         <div class="text-center">
             <h1 class="text-6xl font-bold py-10">Mexsana Medicated Powder</h1>
         </div>
         <div class="flex flex-col items-center gap-4 py-10">
-            <!-- Button for a PDF link -->
-            <a href="Mexsana Medicated Powder_14_03_2024null.pdf" class="bg-blue-500 hover:bg-blue-700 text-white text-3xl font-bold py-2 px-4 rounded">
-             SDS
+            <!-- Clicking this button shows additional buttons -->
+            <a href="#" onclick="showAdditionalButtons(event)" class="bg-blue-500 hover:bg-blue-700 text-white text-3xl font-bold py-2 px-4 rounded">
+                SDS
             </a>
+            <div id="additionalButtons" class="hidden opacity-0 ">
+                <div class="flex gap-4 mt-2">
+                    <a href="Mexsana Medicated Power_2024_March_14_SP001233_FRA_EN.pdf" class="bg-blue-900 hover:bg-blue-400 text-white font-bold text-xl px-2 rounded transition-opacity duration-700 ease-in-out">
+                        <img src="eu.png" class="h-16">
+                    </a>
+                    <a href="Mexsana Medicated Power_2024_March_14_SP001233_USA_EN.pdf" class="bg-blue-300 hover:bg-blue-700 text-white font-bold text-xl px-2 rounded transition-opacity duration-700 ease-in-out">
+                        <img src="flag-united-states_1f1fa-1f1f8.png" class="h-16">
+                    </a>
+                </div>
+            </div>
             <a href="Mexsana Medicated Powder_14_03_2024_mini.pdf" class="bg-blue-500 hover:bg-blue-700 text-white text-3xl font-bold py-2 px-4 rounded">
-               Mini SDS
+                Mini SDS
             </a>
-            <a href="Mexsana Medicated Powder_14_03_2024_EPD.pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold text-3xl py-2 px-4 rounded size">
+            <a href="Mexsana Medicated Powder_14_03_2024_EPD.pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold text-3xl py-2 px-4 rounded">
                 EPD
             </a>
-            <!-- Add more buttons for other PDF links here -->
         </div>
     </div>
+    <script>
+        function showAdditionalButtons(event) {
+            event.preventDefault(); // Prevent the link from navigating
+            const additionalButtons = document.getElementById('additionalButtons');
+            // Check if the buttons are hidden to apply the animation
+            if (additionalButtons.classList.contains('hidden')) {
+                additionalButtons.classList.remove('hidden', 'opacity-0');
+                setTimeout(() => {
+                    additionalButtons.classList.add('opacity-100');
+                }, 20); // A slight delay to ensure the transition happens
+            } else {
+                additionalButtons.classList.add('hidden');
+                additionalButtons.classList.remove('opacity-100');
+                setTimeout(() => {
+                    additionalButtons.classList.add('opacity-0');
+                }, 20); // Reset to the initial state if clicked again
+            }
+        }
+    </script>
 </body>
 </html>
